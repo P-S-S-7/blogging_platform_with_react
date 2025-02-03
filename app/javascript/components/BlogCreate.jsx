@@ -72,13 +72,13 @@ function BlogCreate() {
 	return (
 		<div className="container mt-5">
 			{validationErrors.length > 0 && (
-			<div className="alert alert-danger">
-				<ul>
-					{validationErrors.map((err, index) => (
-					<li key={index}>{err}</li>
-					))}
-				</ul>
-			</div>
+				<div className="alert alert-danger">
+					<ul>
+						{validationErrors.map((err, index) => (
+							<li key={index}>{err}</li>
+						))}
+					</ul>
+				</div>
 			)}
 
 			{error && <div className="alert alert-danger">{error}</div>}
@@ -91,20 +91,21 @@ function BlogCreate() {
 						Title
 					</label>
 					<input
-					type="text"
-					className="form-control"
-					id="title"
-					name="title"
-					value={formData.title}
-					onChange={handleChange}
-					placeholder="Enter blog title"
-				/>
-					</div>
-					<div className="mb-3">
-						<label htmlFor="description" className="form-label fw-bold">
-							Description
-						</label>
-						<textarea
+						type="text"
+						className="form-control"
+						id="title"
+						name="title"
+						value={formData.title}
+						onChange={handleChange}
+						placeholder="Enter blog title"
+					/>
+				</div>
+
+				<div className="mb-3">
+					<label htmlFor="description" className="form-label fw-bold">
+						Description
+					</label>
+					<textarea
 						className="form-control"
 						id="description"
 						name="description"
@@ -113,14 +114,15 @@ function BlogCreate() {
 						onChange={handleChange}
 						placeholder="Write your blog description here"
 					/>
-						</div>
-						<div className="d-flex justify-content-between align-items-center">
-							<button type="submit" className="btn btn-primary rounded-pill px-4">
-								Create Blog
-							</button>
-						</div>
-					</form>
 				</div>
+
+				<div className="d-flex justify-content-between align-items-center">
+					<button type="submit" className="btn btn-primary rounded-pill px-4">
+						Create Blog
+					</button>
+				</div>
+			</form>
+		</div>
 	);
 }
 
