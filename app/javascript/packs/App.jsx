@@ -17,16 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	root.render(
 		<Router>
 			<>
-			<Navbar />
-			<Switch>
-				<Route exact path="/" component={BlogList} />
-				<Route exact path="/blogs/new" component={BlogCreate} />
-				<Route exact path="/blogs/:blogId" component={BlogShow} />
-				<Route exact path="/blogs/:blogId/edit" component={BlogEdit} />
-				<Route exact path="/users/sign_in" component={SignIn} />
-				<Route exact path="/users/sign_up" component={SignUp} />
-			</Switch>
-	</>
-	</Router>
-);
+				<Navbar />
+				<Switch>
+					<Route exact path="/" component={BlogList} />
+					<Route exact path="/blogs/new" component={BlogCreate} />
+					<Route exact path="/blogs/:blogId" component={BlogShow} />
+					<Route exact path="/blogs/:blogId/edit" component={BlogEdit} />
+					<Route exact path="/users/sign_in" component={SignIn} />
+					<Route exact path="/users/sign_up" component={SignUp} />
+				</Switch>
+			</>
+		</Router>
+	);
 });

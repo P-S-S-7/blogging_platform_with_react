@@ -96,13 +96,13 @@ const BlogEdit = () => {
 	return (
 		<div className="container mt-5">
 			{validationErrors.length > 0 && (
-			<div className="alert alert-danger">
-				<ul>
-					{validationErrors.map((err, index) => (
-					<li key={index}>{err}</li>
-					))}
-				</ul>
-			</div>
+				<div className="alert alert-danger">
+					<ul>
+						{validationErrors.map((err, index) => (
+							<li key={index}>{err}</li>
+						))}
+					</ul>
+				</div>
 			)}
 
 			{error && <div className="alert alert-danger">{error}</div>}
@@ -113,17 +113,17 @@ const BlogEdit = () => {
 					<div className="mb-3">
 						<label htmlFor="title" className="form-label">Title</label>
 						<input
-						type="text"
-						className="form-control"
-						id="title"
-						name="title"
-						value={formData.title}
-						onChange={handleChange}
-					/>
-						</div>
-						<div className="mb-3">
-							<label htmlFor="description" className="form-label">Description</label>
-							<textarea
+							type="text"
+							className="form-control"
+							id="title"
+							name="title"
+							value={formData.title}
+							onChange={handleChange}
+						/>
+					</div>
+					<div className="mb-3">
+						<label htmlFor="description" className="form-label">Description</label>
+						<textarea
 							className="form-control"
 							id="description"
 							name="description"
@@ -131,22 +131,22 @@ const BlogEdit = () => {
 							value={formData.description}
 							onChange={handleChange}
 						/>
-							</div>
-							<div className="d-flex justify-content-end gap-2">
-								<button
-								type="button"
-								className="btn btn-secondary"
-								onClick={() => history.push(`/blogs/${blogId}`)}
-								>
-								Cancel
-							</button>
-							<button type="submit" className="btn btn-primary">
-								Update Blog
-							</button>
-						</div>
-					</form>
-				</div>
+					</div>
+					<div className="d-flex justify-content-end gap-2">
+						<button
+							type="button"
+							className="btn btn-secondary"
+							onClick={() => history.push(`/blogs/${blogId}`)}
+						>
+							Cancel
+						</button>
+						<button type="submit" className="btn btn-primary">
+							Update Blog
+						</button>
+					</div>
+				</form>
 			</div>
+		</div>
 	);
 };
 
